@@ -11,9 +11,9 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
 def get_input_file_name():
-'''
-	Write!
-'''
+	'''
+		Write!
+	'''
 	pause = input("Please hit the enter key when you are ready to select ITReport.CSV.")
 	window = Tk()
 	window.withdraw()
@@ -21,26 +21,26 @@ def get_input_file_name():
 	return file_name
 
 def get_data(file_name):
-'''
-	Write!
-'''
+	'''
+		Write!
+	'''
 	open_file = open(file_name)
 	data = list(csv.reader(open_file))
 	open_file.close()
 	return data
 
 def get_user_date():
-'''
-	Write!
-'''
+	'''
+		Write!
+	'''
 	user_date = input('What is the date of the next meeting? (mm/dd/yy)  ')
 	return user_date
 	#Clean/check the input.
 
 def write_ocr_block_to_file(csv_output, text, ocr_list):
-'''
-	Write!
-'''
+	'''
+		Write!
+	'''
 	header_line = "Start Date","End Date","Number","Request Title","Requestor"
 
 	csv_output.writerow([text])
